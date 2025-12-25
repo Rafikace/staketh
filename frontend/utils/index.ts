@@ -8,7 +8,6 @@ if (!projectId || projectId === "YOUR_PROJECT_ID_HERE") {
   throw new Error('Project ID is not defined. Please set your project ID from the WalletConnect Dashboard.')
 }
 
-// you can configure your own network
 const stacksMainnet: InferredCaipNetwork = {
   id: 'stacks-mainnet',
   chainNamespace: 'stacks' as const,
