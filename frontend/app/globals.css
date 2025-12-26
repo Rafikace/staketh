@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -119,6 +122,12 @@
   --sidebar-ring: oklch(0.78 0.16 55);
 }
 
+.sedgwick {
+  font-family: "Sedgwick Ave", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+
 
 @layer base {
   * {
@@ -126,9 +135,13 @@
   }
   body {
     @apply bg-background text-foreground max-w-[1360px] justify-center flex flex-col items-center;
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
   }
   h1{
-    @apply text-[1.75rem] font-[600];
+    @apply text-[1.75rem] font-[600] sedgwick;
   }
   h2{
     @apply text-[1.5rem] font-medium;
