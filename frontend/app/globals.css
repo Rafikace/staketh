@@ -192,3 +192,6 @@ li{
 .hero_footer > :first-child{
   @apply border-primary;
 }
+.icons > *{
+  @apply hover:scale-[1.05] transition-all transform duration-300 text-destructive/80; 
+}
