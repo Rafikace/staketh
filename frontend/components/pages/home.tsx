@@ -73,7 +73,7 @@ export default function Home() {
                 <h1>Ready to bank the unbanked</h1>
                 <h4 className="w-4/5 max-w-[750px]">Join the evolution. start saving securely or build on top of our protocol today</h4>
                 <article className="flex justify-center w-full items-center gap-2 my-4">
-                    <Button>
+                    <Button variant={"destructive"}>
                         Launch App
                     </Button>
                     <Button variant={"outline"}>
