@@ -27,12 +27,12 @@ export default function Home() {
                 <Navbar />
                 <Hero />
             </main>
-            <section className="flex flex-col justify-center item-center text-center w-full">
-                <h4>Bridging the Gap</h4>
+            <section className="flex flex-col gap-6 justify-center item-center text-center w-full">
+                <h2>Bridging the Gap</h2>
                 <p className="text-center w-full">Traditional banks exclude billions. internet-reliant Defi is inaccessible to many.
                     <br />Openvault allows any mobile phone to interact directly with the blockchain
                 </p>
-                <article>
+                <article className="flex flex-col md:flex-row md:px-12 md:py-8 p-2 w-full justify-center md:justify-around items-center">
                     {
                         cards.map((item, index) => (
                             <GapCard key={index} icon={item.icons} description={item.desc} header={item.header} />
