@@ -16,8 +16,8 @@ export default function Home() {
         },
         {
             icons: <PhoneCall />,
-            header: "Offline-first",
-            desc: 'No internet? No Problem. Our protocol is build on USSD Technology, compatible with 99% of mobile phones globally, even without data plans'
+            header: "Censorship-resistant",
+            desc: 'Built on decentralized infrastructure that cannot be shutdown by local authorities or centralized banking failures.'
         }
     ]
     return (
@@ -33,8 +33,8 @@ export default function Home() {
                 </p>
                 <article>
                     {
-                        cards.map(() => (
-                            
+                        cards.map((item, index) => (
+                            <GapCard key={index} icon={item.icons} description={item.desc} header={item.header} />
                         ))
                     }
                 </article>
