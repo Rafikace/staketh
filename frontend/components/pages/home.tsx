@@ -1,6 +1,7 @@
 import { Phone, PhoneCall } from "lucide-react";
 import Navbar from "../commons/navbar";
 import Hero from "./home/hero";
+import GapCard from "../commons/gapcard";
 
 export default function Home() {
     const cards = [
