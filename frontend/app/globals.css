@@ -179,3 +179,6 @@ li{
 .headers{
   @apply flex flex-col text-4xl capitalize font-bold text-primary/90;
 }
+.hero_footer{
+  @apply bg-primary/20 w-full h-[120px] border flex justify-between items-center text-start;
+}
