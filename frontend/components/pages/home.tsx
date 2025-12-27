@@ -29,10 +29,10 @@ export default function Home() {
             </main>
             <section className="flex flex-col gap-4 justify-center item-center text-center w-full">
                 <div className="w-full gap-3">
-                <h2 className="font-[700]">Bridging the Gap</h2>
-                <h6 className="text-center w-full p-2">Traditional banks exclude billions. internet-reliant Defi is inaccessible to many.
-                    <br />Openvault allows any mobile phone to interact directly with the blockchain
-                </h6>
+                    <h2 className="font-[700]">Bridging the Gap</h2>
+                    <h6 className="text-center w-full p-2">Traditional banks exclude billions. internet-reliant Defi is inaccessible to many.
+                        <br />Openvault allows any mobile phone to interact directly with the blockchain
+                    </h6>
                 </div>
                 <article className="flex flex-col gap-4  md:flex-row md:px-12 md:py-8 p-2 w-full justify-center md:justify-around items-center">
                     {
@@ -42,6 +42,31 @@ export default function Home() {
                     }
                 </article>
             </section>
+            <div className="border-y-1 flex flex-col md:flex-row md:justify-center md:gap-6 p-6 md:p-8 bg-primary/20">
+                <section className="h-full w-full border border-1 rounded-lg md:w-[40%]">
+                </section>
+                <section>
+                    <h1>Simple technology</h1>
+                    <h1>Complex Security</h1>
+                    <article>
+                        { 
+                            [
+                                { header: "Dial the code", description: "User dials a simple ussd cdoe on any mobile phone" },
+                                { header: "Deposit local currency ", description: "Deposit fiat via mobile money agents. The protocol converts it to stable coins" },
+                                { header: "Earn, swap, transact", description: "Interactions are done as funds are deployed to defi strategies to earn yields" }
+                            ].map((item,index) => (
+                                <div key={index} className="flex gap-4 py-2">
+                                    <h5 className="text-secondary border justify-center h-6 w-6 items-center flex rounded-[50%] bg-destructive/40">{index}</h5>
+                                    <article className="flex flex-col">
+                                        <h4>{item.header}</h4>
+                                        <h6>{item.description}</h6>
+                                    </article>
+                                </div>
+                            ))
+                        }
+                    </article>
+                </section>
+            </div>
         </div>
     )
 }
