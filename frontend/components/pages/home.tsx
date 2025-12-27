@@ -57,8 +57,8 @@ export default function Home() {
                                 { header: "Deposit local currency ", description: "Deposit fiat via mobile money agents. The protocol converts it to stable coins" },
                                 { header: "Earn, swap, transact", description: "Interactions are done as funds are deployed to defi strategies to earn yields" }
                             ].map((item,index) => (
-                                <div key={index} className="flex gap-4 py-2">
-                                    <h5 className="text-secondary border justify-center h-6 w-6 items-center flex rounded-[50%] bg-destructive/40">{index}</h5>
+                                <div key={index} className="flex gap-4 py-2 items-start">
+                                    <h6 className="text-secondary border justify-center h-6 w-6 items-center flex rounded-[50%] bg-destructive ">{index}</h6>
                                     <article className="flex flex-col">
                                         <h4>{item.header}</h4>
                                         <h6>{item.description}</h6>

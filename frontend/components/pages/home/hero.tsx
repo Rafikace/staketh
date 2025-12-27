@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
     return (
         <div className="flex flex-col gap-3 h-full justify-between items-center w-full">
-            <div className="flex flex-col md:flex-row gap-3 sm:gap-6 py-6 px-6 md:px-12 h-full justify-between items-center w-full">
+            <div className="flex flex-col md:flex-row gap-3 sm:gap-6 py-6 md:p-16 px-6 h-full justify-between items-center w-full">
                 <section className="flex flex-col gap-3 md:gap-8 md:w-[40%]">
                     <p className="p-[3px_4px] rounded-lg flex gap-2 items-center max-w-[125px] text-sm bg-destructive/10 border-1 border-primary"><div className="w-2 h-2 rounded-[50%] bg-destructive" />Live on mainnet</p>
                     <article className="headers">
