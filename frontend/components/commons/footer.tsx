@@ -14,6 +14,7 @@ export default function Footer() {
                     <Twitter size={25}/>
                 </div>
             </aside>
+            
         </main>
     )
 }
