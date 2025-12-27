@@ -182,3 +182,6 @@ li{
 .hero_footer{
   @apply bg-primary/20 w-full h-[120px] border flex justify-between items-center text-start;
 }
+.hero_footer article{
+  @apply w-1/3 justify-start items-start border-l-[2px];
+}
