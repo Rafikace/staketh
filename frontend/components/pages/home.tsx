@@ -3,6 +3,7 @@ import Navbar from "../commons/navbar";
 import Hero from "./home/hero";
 import GapCard from "../commons/gapcard";
 import { Button } from "../ui/button";
+import Footer from "../commons/footer";
 
 export default function Home() {
     const cards = [
@@ -80,6 +81,7 @@ export default function Home() {
                     </Button>
                 </article>
             </section>
+            <Footer />
         </div>
     )
 }
