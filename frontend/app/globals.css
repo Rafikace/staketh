@@ -172,7 +172,7 @@
   }
 }
 li{
-  @apply list-none text-[0.85rem] text-primary font-[550] text-start hover:underline capitalize cursor-pointer;
+  @apply list-none text-[0.85rem] text-destructive font-[550] text-start hover:underline capitalize cursor-pointer;
   font-family: "Sedgwick Ave", cursive;
     font-style: normal;
 }
