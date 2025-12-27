@@ -2,6 +2,7 @@ import { Phone, PhoneCall } from "lucide-react";
 import Navbar from "../commons/navbar";
 import Hero from "./home/hero";
 import GapCard from "../commons/gapcard";
+import { Button } from "../ui/button";
 
 export default function Home() {
     const cards = [
@@ -22,7 +23,7 @@ export default function Home() {
         }
     ]
     return (
-        <div className="w-full flex flex-col">
+        <div className="w-full flex flex-col items-center">
             <main className="min-h-screen w-full flex flex-col">
                 <Navbar />
                 <Hero />
@@ -42,7 +43,7 @@ export default function Home() {
                     }
                 </article>
             </section>
-            <div className="border-y-1 flex flex-col md:flex-row md:justify-center md:gap-6 p-6 md:p-8 bg-primary/20">
+            <div className="w-full border-y-1 flex flex-col md:flex-row md:justify-center md:gap-6 p-6 md:p-8 bg-primary/20">
                 <section className="h-full w-full border border-1 rounded-lg md:w-[40%]">
                 </section>
                 <section>
@@ -67,6 +68,18 @@ export default function Home() {
                     </article>
                 </section>
             </div>
+            <section className="my-8 md:my-18 rounded-lg border text-center flex flex-col items-center max-w-[650px] py-8 px-6 bg-primary/20">
+                <h1>Ready to bank the unbanked</h1>
+                <h4 className="w-4/5 max-w-[750px]">Join the evolution. start saving securely or build on top of our protocol today</h4>
+                <article className="flex justify-center w-full items-center gap-2 my-4">
+                    <Button>
+                        Launch App
+                    </Button>
+                    <Button variant={"outline"}>
+                        Documentation
+                    </Button>
+                </article>
+            </section>
         </div>
     )
 }
