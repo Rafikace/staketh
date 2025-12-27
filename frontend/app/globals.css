@@ -179,9 +179,15 @@ li{
 .headers{
   @apply flex flex-col text-4xl capitalize font-bold text-primary/90;
 }
+.headers h1{
+  @apply text-[2.5rem] font-[800];
+}
 .hero_footer{
   @apply bg-primary/20 w-full h-[120px] border flex justify-between items-center text-start;
 }
 .hero_footer article{
-  @apply w-1/3 justify-start items-start border-l-[2px];
+  @apply w-1/3 justify-start items-start border-l-3 px-2;
+}
+.hero_footer article :first-child{
+  @apply border-primary 
 }

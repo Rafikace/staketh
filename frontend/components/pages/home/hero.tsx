@@ -3,15 +3,15 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
     return (
         <div className="flex flex-col gap-3 h-full justify-between items-center w-full">
-            <div className="flex flex-col md:flex-row gap-3 py-6 px-6 h-full justify-between items-center w-full">
-                <section className="flex flex-col gap-3 md:gap-8 ">
+            <div className="flex flex-col md:flex-row gap-3 py-6 px-6 md:px-12 h-full justify-between items-center w-full">
+                <section className="flex flex-col gap-3 md:gap-8 w-1/2">
                     <p className="p-[3px_4px] rounded-lg flex gap-2 items-center max-w-[125px] text-sm bg-destructive/10 border-1 border-primary"><div className="w-2 h-2 rounded-[50%] bg-destructive" />Live on mainnet</p>
                     <article className="headers">
                         <h1 className="text-foreground/30">Offline.</h1>
                         <h1 className="text-foreground/30">Permisionless.</h1>
                         <h1 className="text-primary">Unstoppable.</h1>
                     </article>
-                    <p className="max-w-[400px] sm:text-[0.85rem]">The saving protocol for the unbanked world. Access high-yield Defi vaults without an internet connection via USSD. Bank the unbanked, completely offline</p>
+                    <p className="max-w-[400px] sm:text-[0.9rem]">The saving protocol for the unbanked world. Access high-yield Defi vaults without an internet connection via USSD. Bank the unbanked, completely offline</p>
                     <div className="flex gap-3">
                         <Button variant={"destructive"}>Start Saving</Button>
                         <Button variant={"outline"} >read whitepaper</Button>
