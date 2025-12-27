@@ -1,6 +1,9 @@
+import Navbar from "../commons/navbar";
+
 export default function Home() { 
     return (
-        <div>
+        <div className="w-full flex">
+            <Navbar/>
         </div>
     )
 }

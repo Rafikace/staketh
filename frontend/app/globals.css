@@ -1,7 +1,7 @@
-@import "tailwindcss";
-@import "tw-animate-css";
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
 
 
 @custom-variant dark (&:is(.dark *));
@@ -135,19 +135,26 @@
   }
   body {
     @apply bg-background text-foreground max-w-[1360px] justify-center flex flex-col items-center;
-    font-family: "Jura", sans-serif;
+    font-family: "Jura";
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
   }
   h1{
-    @apply text-[1.75rem] font-[600] sedgwick;
+    @apply text-[1.75rem] font-[600];
+    font-family: "Sedgwick Ave", cursive;
+    font-style: normal;
   }
   h2{
     @apply text-[1.5rem] font-medium;
   }
   h3{
     @apply text-[1.25rem] font-bold;
+  }
+  h4{
+    @papply text-[1.05rem];
+     font-family: "Sedgwick Ave", cursive;
+    font-style: normal;
   }
   h5{
     @apply text-[1rem] font-medium;
@@ -159,11 +166,13 @@
     @apply text-[0.75rem] font-light text-start;
   }
   span{
-    @apply text-[1.75rem] font-light;   
+    @apply text-[0.8rem] font-light;   
   }
 }
 li{
-  @apply list-none text-[0.75rem] font-light text-start hover:text-underline text-[#ffffff];
+  @apply list-none text-[0.85rem] text-primary font-[550] text-start hover:underline capitalize cursor-pointer;
+  font-family: "Sedgwick Ave";
+    font-style: normal;
 }
 
 
