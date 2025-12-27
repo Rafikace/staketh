@@ -9,7 +9,7 @@ export default function Hero() {
                     <article className="headers">
                         <h1 className="text-foreground/30">Offline.</h1>
                         <h1 className="text-foreground/30">Permisionless.</h1>
-                        <h1 className="text-primary">Unstoppable.</h1>
+                        <h1 className="text-destructive">Unstoppable.</h1>
                     </article>
                     <p className="max-w-[400px] sm:text-[0.9rem]">The saving protocol for the unbanked world. Access high-yield Defi vaults without an internet connection via USSD. Bank the unbanked, completely offline</p>
                     <div className="flex gap-3">
