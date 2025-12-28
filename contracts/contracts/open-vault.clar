@@ -1,6 +1,10 @@
 ;; OpenVault: Offline-first savings protocol
 ;; Contract to manage user vaults
 
+;; Constants
+(define-constant ERR_INVALID_AMOUNT (err u100))
+(define-constant ERR_INSUFFICIENT_BALANCE (err u101))
+
 ;; Data Maps
 (define-map Vaults principal { balance: uint })
 
