@@ -8,7 +8,14 @@
 ;; Data Maps
 (define-map Vaults principal { balance: uint })
 
+;; Data Variables
+(define-data-var TotalValueLocked uint u0)
+
 ;; Read-only functions
+(define-read-only (get-total-tvl)
+    (var-get TotalValueLocked)
+)
+
 (define-read-only (get-vault-balance (user principal))
     (default-to u0 (get balance (map-get? Vaults user)))
 )
@@ -29,6 +36,7 @@
                 (new-balance (+ current-balance amount))
             )
             (map-set Vaults tx-sender { balance: new-balance })
+            (var-set TotalValueLocked (+ (var-get TotalValueLocked) amount))
             (ok true)
         )
     )
