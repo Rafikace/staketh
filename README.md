@@ -38,7 +38,7 @@ No centralized party can freeze, seize, or modify user funds.
 
 ---
 
-## Core Properties (ETHGlobal-Aligned)
+## Core Properties
 
 - Non-custodial by design
 - Permissionless access (no KYC, no accounts)
