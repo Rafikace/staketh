@@ -41,10 +41,10 @@
                 (current-balance (get-vault-balance tx-sender))
             )
             ;; Check amount is greater than 0
-            (asserts! (> amount u0) (err u100)) ;; ERR_INVALID_AMOUNT
+            (asserts! (> amount u0) ERR_INVALID_AMOUNT)
             
             ;; Check sufficient balance
-            (asserts! (>= current-balance amount) (err u101)) ;; ERR_INSUFFICIENT_BALANCE
+            (asserts! (>= current-balance amount) ERR_INSUFFICIENT_BALANCE)
             
             ;; Transfer STX from contract to sender
             (try! (as-contract (stx-transfer? amount tx-sender tx-sender)))
