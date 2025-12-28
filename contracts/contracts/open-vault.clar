@@ -4,6 +4,9 @@
 ;; Constants
 (define-constant ERR_INVALID_AMOUNT (err u100))
 (define-constant ERR_INSUFFICIENT_BALANCE (err u101))
+(define-constant ERR_NOT_AUTHORIZED (err u102))
+
+(define-constant contract-owner tx-sender)
 
 ;; Data Maps
 (define-map Vaults principal { balance: uint })
