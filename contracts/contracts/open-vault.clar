@@ -29,3 +29,7 @@
         )
     )
 )
+
+(define-public (withdraw (amount uint))
+    (ok true)
+)
