@@ -59,6 +59,7 @@
             
             ;; Update vault balance
             (map-set Vaults tx-sender { balance: (- current-balance amount) })
+            (var-set TotalValueLocked (- (var-get TotalValueLocked) amount))
             (ok true)
         )
     )
