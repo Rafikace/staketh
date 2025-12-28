@@ -128,3 +128,59 @@ describe('deposit', () => {
     expect(transferEvent?.data.sender).toBe(wallet1);
   });
 });
+
+describe('withdraw', () => {
+  it('successfully withdraws valid amount', () => {
+    // Setup: Deposit first
+    simnet.callPublicFn('open-vault', 'deposit', [Cl.uint(1000)], wallet1);
+
+    const response = simnet.callPublicFn(
+      'open-vault',
+      'withdraw',
+      [Cl.uint(500)],
+      wallet1
+    );
+    expect(response.result).toBeOk(Cl.bool(true));
+
+    // Check balance updated
+    const balance = simnet.callReadOnlyFn(
+      'open-vault',
+      'get-vault-balance',
+      [Cl.principal(wallet1)],
+      wallet1
+    );
+    expect(balance.result).toBeUint(500);
+  });
+
+  it('fails to withdraw zero amount', () => {
+    const response = simnet.callPublicFn(
+      'open-vault',
+      'withdraw',
+      [Cl.uint(0)],
+      wallet1
+    );
+    expect(response.result).toBeErr(Cl.uint(100)); // ERR_INVALID_AMOUNT
+  });
+
+  it('fails to withdraw more than balance', () => {
+    simnet.callPublicFn('open-vault', 'deposit', [Cl.uint(100)], wallet1);
+
+    const response = simnet.callPublicFn(
+      'open-vault',
+      'withdraw',
+      [Cl.uint(200)],
+      wallet1
+    );
+    expect(response.result).toBeErr(Cl.uint(101)); // ERR_INSUFFICIENT_BALANCE
+  });
+
+  it('fails to withdraw with no vault', () => {
+    const response = simnet.callPublicFn(
+      'open-vault',
+      'withdraw',
+      [Cl.uint(100)],
+      wallet2 // No deposit made
+    );
+    expect(response.result).toBeErr(Cl.uint(101)); // ERR_INSUFFICIENT_BALANCE (treat as 0 balance)
+  });
+});
