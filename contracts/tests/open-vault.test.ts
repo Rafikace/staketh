@@ -184,3 +184,27 @@ describe('withdraw', () => {
     expect(response.result).toBeErr(Cl.uint(101)); // ERR_INSUFFICIENT_BALANCE (treat as 0 balance)
   });
 });
+
+describe('get-total-tvl', () => {
+  it('starts at 0', () => {
+    const response = simnet.callReadOnlyFn('open-vault', 'get-total-tvl', [], deployer);
+    expect(response.result).toBeUint(0);
+  });
+
+  it('increments on deposit and decrements on withdraw', () => {
+    // Deposit 1000
+    simnet.callPublicFn('open-vault', 'deposit', [Cl.uint(1000)], wallet1);
+    let tvl = simnet.callReadOnlyFn('open-vault', 'get-total-tvl', [], deployer);
+    expect(tvl.result).toBeUint(1000);
+
+    // Deposit 500 from another user
+    simnet.callPublicFn('open-vault', 'deposit', [Cl.uint(500)], wallet2);
+    tvl = simnet.callReadOnlyFn('open-vault', 'get-total-tvl', [], deployer);
+    expect(tvl.result).toBeUint(1500);
+
+    // Withdraw 200
+    simnet.callPublicFn('open-vault', 'withdraw', [Cl.uint(200)], wallet1);
+    tvl = simnet.callReadOnlyFn('open-vault', 'get-total-tvl', [], deployer);
+    expect(tvl.result).toBeUint(1300);
+  });
+});
