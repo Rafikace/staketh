@@ -1,4 +1,5 @@
-;; title: open-vault
+;; title: OpenVault: Offline-first savings protocol
+;; Contract to manage user vaults
 ;; version:
 ;; summary:
 ;; description:
