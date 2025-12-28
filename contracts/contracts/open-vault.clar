@@ -1,30 +1,15 @@
-;; title: OpenVault: Offline-first savings protocol
+;; OpenVault: Offline-first savings protocol
 ;; Contract to manage user vaults
-;; version:
-;; summary:
-;; description:
 
-;; traits
-;;
+;; Data Maps
+(define-map Vaults principal { balance: uint })
 
-;; token definitions
-;;
+;; Read-only functions
+(define-read-only (get-vault-balance (user principal))
+    (default-to u0 (get balance (map-get? Vaults user)))
+)
 
-;; constants
-;;
-
-;; data vars
-;;
-
-;; data maps
-;;
-
-;; public functions
-;;
-
-;; read only functions
-;;
-
-;; private functions
-;;
-
+;; Public functions
+(define-public (deposit (amount uint))
+    (ok true)
+)
